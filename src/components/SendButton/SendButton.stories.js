@@ -7,11 +7,7 @@ const story = {
 };
 export default story;
 
-export const Default = (args) => (
-  <div style={{ width: '50px', height: '50px' }}>
-    <SendButton {...args} />
-  </div>
-);
+export const Default = (args) => <SendButton {...args} />;
 
 Default.args = {
   onClick: () => {},
