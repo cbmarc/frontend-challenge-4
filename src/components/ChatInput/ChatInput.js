@@ -3,9 +3,17 @@ import { ChatInputText } from '../ChatInputText/ChatInputText';
 import { SendButton } from '../SendButton/SendButton';
 import styles from './ChatInput.module.css';
 
+/**
+ * ChatInput component used to wrap all of the chat input components, like the input and the button
+ * @param {Object} props
+ * @returns ChatInput component
+ */
 export const ChatInput = ({ submit }) => {
   const [input, setInput] = useState('');
 
+  /**
+   * Handles the submit of the child components
+   */
   const handleSubmit = () => {
     submit(input);
     setInput('');

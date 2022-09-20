@@ -2,6 +2,14 @@ import React from 'react';
 import { concatenateClassNames } from '../../classNameUtils';
 import styles from './Message.module.css';
 
+/**
+ * Message component used in the chat. This represents each individual chat bubble.
+ *
+ * @param {Object} props
+ * author is the author of the message
+ * text is the text of the message
+ * @returns a Message component
+ */
 export const Message = ({ author, text }) => {
   return (
     <article
