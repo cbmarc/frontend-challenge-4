@@ -1,0 +1,41 @@
+.LandbotMessage {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.LandbotMessage + .LandbotMessage {
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.LandbotMessage[data-author='bot'] + .LandbotMessage[data-author='bot'],
+.LandbotMessage[data-author='user'] + .LandbotMessage[data-author='user'] {
+  margin-top: 3px;
+}
+
+.LandbotMessage[data-author='user'] {
+  justify-content: flex-end;
+}
+
+.LandbotMessageAvatar {
+  display: none;
+}
+
+.LandbotMessageContent {
+  color: var(--light);
+  padding: 8px 15px;
+  border-radius: 18px;
+  display: inline-block;
+  flex-grow: 0;
+}
+
+.LandbotMessage[data-author='bot'] .LandbotMessageContent {
+  background-color: var(--dark-blue-2);
+  border-bottom-left-radius: 2px;
+}
+
+.LandbotMessage[data-author='user'] .LandbotMessageContent {
+  background-color: var(--orange);
+  border-bottom-right-radius: 2px;
+}

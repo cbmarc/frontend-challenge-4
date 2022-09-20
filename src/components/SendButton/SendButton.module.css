@@ -1,0 +1,14 @@
+.LandbotInputSend {
+  color: var(--orange);
+  background-color: transparent;
+  border: 0;
+}
+
+.LandbotInputSend:hover {
+  color: var(--orange);
+}
+
+.Button[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+}

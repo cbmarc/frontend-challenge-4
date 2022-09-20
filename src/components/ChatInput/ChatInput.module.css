@@ -1,0 +1,13 @@
+.LandbotInputContainer {
+  position: relative;
+  background-color: var(--dark-blue-2);
+  border-bottom-left-radius: var(--chat-border-radius);
+  border-bottom-right-radius: var(--chat-border-radius);
+}
+
+.LandbotInputSend {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

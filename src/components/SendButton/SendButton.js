@@ -1,10 +1,17 @@
 import React from 'react';
+import { concatenateClassNames } from '../../classNameUtils';
+import styles from './SendButton.module.css';
 
-export const SendButton = ({ onClick, disabled }) => {
+export const SendButton = ({ onClick, disabled, className }) => {
   return (
     <button
       data-testid="send-button"
-      className="button landbot-input-send"
+      className={concatenateClassNames(
+        styles.Button,
+        styles.LandbotInputSend,
+        'button',
+        className
+      )}
       onClick={onClick}
       disabled={disabled}
     >
