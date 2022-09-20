@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ChatInput = ({ value, onChange, onKeyUp }) => (
+export const ChatInputText = ({ value, onChange, onKeyUp }) => (
   <input
     data-testid="chat-input"
     className="landbot-input"

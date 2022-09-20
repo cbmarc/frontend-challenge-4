@@ -5,13 +5,13 @@ import { Header } from './Header';
 
 describe('Header', () => {
   it('Should render correctly', () => {
-    const { baseElement } = render(<Header text="whatever" />);
+    const { baseElement } = render(<Header>whatever</Header>);
     expect(baseElement).toBeInTheDocument();
   });
 
   it('Should have the provided text', () => {
     const headerText = 'Something';
-    const { queryByText } = render(<Header text={headerText} />);
+    const { queryByText } = render(<Header>{headerText}</Header>);
     expect(queryByText(headerText)).toBeTruthy();
   });
 });

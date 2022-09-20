@@ -1,16 +1,16 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { InputContainer } from './InputContainer';
+import { ChatInput } from './ChatInput';
 
-describe('InputContainer', () => {
+describe('ChatInput', () => {
   it('Should be rendered', () => {
-    const { baseElement } = render(<InputContainer submit={jest.fn()} />);
+    const { baseElement } = render(<ChatInput submit={jest.fn()} />);
     expect(baseElement).toBeInTheDocument();
   });
 
   it('Should call submit when submitted.', () => {
     const onSubmit = jest.fn();
-    const { getByTestId } = render(<InputContainer submit={onSubmit} />);
+    const { getByTestId } = render(<ChatInput submit={onSubmit} />);
     const input = getByTestId('chat-input');
     const value = 'something';
     fireEvent.change(input, { target: { value: value } });

@@ -1,11 +1,11 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { ChatInput } from './ChatInput';
+import { ChatInputText } from './ChatInputText';
 
-describe('ChatInput', () => {
+describe('ChatInputText', () => {
   it('Should be rendered', () => {
     const { baseElement } = render(
-      <ChatInput onChange={jest.fn} onKeyUp={null} value="" />
+      <ChatInputText onChange={jest.fn} onKeyUp={null} value="" />
     );
     expect(baseElement).toBeInTheDocument();
   });
@@ -13,7 +13,7 @@ describe('ChatInput', () => {
   it('Should call the onChange event when changed.', () => {
     const onChange = jest.fn();
     const { getByTestId } = render(
-      <ChatInput onChange={onChange} onKeyUp={null} value="" />
+      <ChatInputText onChange={onChange} onKeyUp={null} value="" />
     );
     fireEvent.change(getByTestId('chat-input'), {
       target: { value: 'whatever' },
@@ -25,7 +25,7 @@ describe('ChatInput', () => {
   it('Should call the onKeyUp event when pressing a key.', () => {
     const onKeyUp = jest.fn();
     const { getByTestId } = render(
-      <ChatInput onChange={jest.fn()} onKeyUp={onKeyUp} value="" />
+      <ChatInputText onChange={jest.fn()} onKeyUp={onKeyUp} value="" />
     );
     fireEvent.keyUp(getByTestId('chat-input'), { key: 'A', code: 'A' });
     expect(onKeyUp).toHaveBeenCalledTimes(1);
@@ -34,7 +34,7 @@ describe('ChatInput', () => {
   it('Should show the default provided value', () => {
     const defaultValue = 'Default value';
     const { queryByDisplayValue } = render(
-      <ChatInput onChange={jest.fn} onKeyUp={null} value={defaultValue} />
+      <ChatInputText onChange={jest.fn} onKeyUp={null} value={defaultValue} />
     );
     expect(queryByDisplayValue(defaultValue)).toBeTruthy();
   });

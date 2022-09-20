@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChatInput } from './ChatInput';
-import { SendButton } from './SendButton';
+import { ChatInputText } from '../ChatInputText/ChatInputText';
+import { SendButton } from '../SendButton/SendButton';
 
-export const InputContainer = ({ submit }) => {
+export const ChatInput = ({ submit }) => {
   const [input, setInput] = useState('');
 
   const handleSubmit = () => {
@@ -14,7 +14,7 @@ export const InputContainer = ({ submit }) => {
     <div className="landbot-input-container">
       <div className="field">
         <div className="control">
-          <ChatInput
+          <ChatInputText
             value={input}
             onChange={setInput}
             onKeyUp={(e) => {
