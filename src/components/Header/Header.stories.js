@@ -7,4 +7,8 @@ const story = {
 };
 export default story;
 
-export const Default = () => <Header>I'm a header</Header>;
+export const Default = () => (
+  <Header>
+    <span style={{ color: 'white' }}>I'm a header</span>
+  </Header>
+);
